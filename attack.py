@@ -18,9 +18,9 @@ driver = webdriver.Chrome(options=options)
 #service = Service(executable_path='./chrome/chromedriver')
 #driver = webdriver.Chrome(service=service)
 
-chrome_options=Options()
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--disable-gpu')
+#chrome_options=Options()
+#chrome_options.add_argument('--headless')
+#chrome_options.add_argument('--disable-gpu')
 
 
 def invade():
