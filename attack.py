@@ -26,12 +26,14 @@ driver = webdriver.Chrome(options=options)
 def invade():
     print("开始攻击")
     global t
-    browser1 = webdriver.Chrome(chrome_options=chrome_options)
+#    browser1 = webdriver.Chrome(chrome_options=chrome_options)
+    browser1 = webdriver.Chrome(chrome_options=options)
     browser1.get("https://note.ms/chatchat")
     textarea1 = browser1.find_element_by_tag_name("textarea")
     text = textarea1.text
     browser1.close()
-    browser2 = webdriver.Chrome(chrome_options=chrome_options)
+ #   browser2 = webdriver.Chrome(chrome_options=chrome_options)
+    browser2 = webdriver.Chrome(chrome_options=options)
     browser2.get("https://note.ms/chat")
     textarea = browser2.find_element_by_tag_name("textarea")
     textarea.click()
@@ -45,7 +47,8 @@ def invade():
 
 
 while True:
-    browser =webdriver.Chrome(chrome_options=chrome_options)
+ #   browser =webdriver.Chrome(chrome_options=chrome_options)
+    browser =webdriver.Chrome(chrome_options=options)
     browser.get("https://note.ms/chat")
     textarea = browser.find_element_by_tag_name("textarea")
     text = textarea.text
