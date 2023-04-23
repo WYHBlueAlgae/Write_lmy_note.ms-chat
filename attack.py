@@ -30,7 +30,7 @@ def invade():
     browser1 = webdriver.Chrome(chrome_options=options)
     browser1.get("https://note.ms/chatchat")
 #    textarea1 = browser1.find_element_by_tag_name("textarea")
-    textarea1 = browser1.page_source()
+    textarea1 = browser1.find_element_by_tag_name("textarea")
     text = textarea1.text
     browser1.close()
  #   browser2 = webdriver.Chrome(chrome_options=chrome_options)
@@ -45,8 +45,8 @@ def invade():
     browser2.refresh()
     browser2.close()
     print("攻击完毕,已夺回聊天室")
-invade()
-'''
+
+
 while True:
  #   browser =webdriver.Chrome(chrome_options=chrome_options)
     browser =webdriver.Chrome(chrome_options=options)
@@ -57,4 +57,3 @@ while True:
     if "lmy" not in text:
         invade()
     time.sleep(300)
-    '''
