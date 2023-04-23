@@ -10,7 +10,7 @@ def invade():
     print("开始攻击")
     global t
     browser1 = webdriver.Chrome(chrome_options=chrome_options)
-    browser1.get("https://note.ms/chatbf")
+    browser1.get("https://note.ms/chatchat")
     textarea1 = browser1.find_element_by_tag_name("textarea")
     text = textarea1.text
     browser1.close()
