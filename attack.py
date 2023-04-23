@@ -2,12 +2,21 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 
-from selenium.webdriver.chrome.service import Service
-service = Service('/path/to/chromedriver')
-driver = webdriver.Chrome(service=service)
-
-#service = Service(executable_path='./chrome/chromedriver')
+#from selenium.webdriver.chrome.service import Service
+#service = Service('/path/to/chromedriver')
 #driver = webdriver.Chrome(service=service)
+
+#from selenium import webdriver
+#from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+driver = webdriver.Chrome(options=options)
+
+
+service = Service(executable_path='./chrome/chromedriver')
+driver = webdriver.Chrome(service=service)
 
 chrome_options=Options()
 chrome_options.add_argument('--headless')
