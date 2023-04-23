@@ -2,9 +2,13 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 
+service = Service(executable_path='./chrome/chromedriver')
+driver = webdriver.Chrome(service=service)
+
 chrome_options=Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-gpu')
+
 
 def invade():
     print("开始攻击")
