@@ -2,8 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 
-service = Service(executable_path='./chrome/chromedriver')
+from selenium.webdriver.chrome.service import Service
+service = Service('/path/to/chromedriver')
 driver = webdriver.Chrome(service=service)
+
+#service = Service(executable_path='./chrome/chromedriver')
+#driver = webdriver.Chrome(service=service)
 
 chrome_options=Options()
 chrome_options.add_argument('--headless')
