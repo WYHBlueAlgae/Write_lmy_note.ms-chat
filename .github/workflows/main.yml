@@ -2,9 +2,9 @@ name: Run python wrtie on chat
 
 on:
   push:
-  schedule:
+#  schedule:
     
-    - cron: '0 21 * * *'
+#    - cron: '0 21 * * *'
 
     
 jobs:
